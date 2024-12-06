@@ -60,6 +60,7 @@ public class SecurityConfig {
                                 .requestMatchers("/api/register").permitAll()
                                 .requestMatchers("/api/home").permitAll()
                                 .requestMatchers("/admin").hasAnyAuthority("ADMIN")
+                                .requestMatchers("/admin/crearproducto").hasAnyAuthority("ADMIN")
                                 .requestMatchers("/user").hasAnyAuthority("USER")
                                 .anyRequest().authenticated()
                 )

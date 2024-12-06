@@ -25,7 +25,7 @@ import { ButtonModule } from 'primeng/button';
     InputTextModule,
     HeaderComponent,
     FooterComponent,
-    FormsModule],
+    ButtonModule],
   templateUrl: './registrar.component.html',
   styleUrl: './registrar.component.css'
 })
@@ -38,7 +38,6 @@ export default class RegistrarComponent {
   constructor(
     private fb: FormBuilder,
     private usuarioservice: UsuarioService,
-
     private messageService: MessageService,
 
   ) {
@@ -60,16 +59,16 @@ export default class RegistrarComponent {
       this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Revise los campos e intente nuevamente', });
       return;
     }
-    this.isSaveInProgress = true;
+    this.isSaveInProgress = true
 
     this.usuarioservice.createUsuario(this.userForm.value).subscribe({
-      next: () => {
+      next:()=> {
         this.messageService.add({ severity: 'success', summary: 'Guardado', detail: 'usuario guardado correctamente' });
-        this.isSaveInProgress = false;
+        this.isSaveInProgress = false
       },
-      error: () => {
-        this.isSaveInProgress = false;
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Revise los campos e intente nuevamente' });
+      error:()=> {
+        this.isSaveInProgress = false
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Revise los campos e intente nuevamentexxxxx' });
       },
     });
   }

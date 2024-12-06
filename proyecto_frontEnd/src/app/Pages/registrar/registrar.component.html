@@ -7,24 +7,23 @@
 	<h3>Registrarse</h3>
 
 	<form  [formGroup]="userForm" (ngSubmit)="createUsuario()">
-		<label for="first">
+		<label for="email">
 			email:
 		</label>
-		<input pInputText formControlName="email" type="text" id="first" name="email" placeholder="Enter your email" required>
+		<input pInputText formControlName="email" type="text" id="email" name="email" placeholder="Enter your email" required>
 
-		<label for="first">
+		<label for="username">
 			UserName:
 		</label>
-		<input pInputText formControlName="username" type="text" id="first" name="username" placeholder="Enter your username" required>
+		<input pInputText formControlName="username" type="text" id="username" name="username" placeholder="Enter your username" required>
 
 		<label for="password">
 			Password:
 		</label>
-		<input pInputText formControlName="password" type="password" id="password" name="password" placeholder="Enter your Password"
-			required>
+		<input pInputText formControlName="password" type="password" id="password" name="password" placeholder="Enter your Password" required>
 
-		<div class="wrap">
-			<button  type="submit">Registrarse</button>
+		<div class="flex gap-2">
+		<	<button  type="submit">Registrarse</button>>
 		</div>
 	</form>
 </div>
